@@ -80,3 +80,82 @@ def letra_x(n)
 end
 
 letra_x(5)
+
+#--------------------------------------------------------------------------
+#letra_z
+
+def diagonal(num)
+  (num-2).times do |i|
+    num.times do |j|
+      if j == num-2-i
+        print "*"
+      else
+        print "  "
+      end
+    end
+    print "\n"
+  end  
+end
+def letra_z(num)
+ cover(num) 
+ diagonal(num)
+ cover(num) 
+end
+letra_z(5)
+
+#--------------------------------------------------------------------------
+#numero_cero
+#11111
+#11001
+#10101
+#10011
+#11111
+ 
+def medio(num)
+    (num-2).times do |i|
+        num.times do |j|
+          if j == num-2
+            print "*   *   *"
+          else
+            print ""
+          end
+        end
+        print "\n"
+    end
+end
+
+def numero_cero(num)
+    cover(num)
+    medio(num)
+    cover(num)
+  end
+  numero_cero(5)
+
+#navidad
+def navidad(num)
+    for i in 0..(num-1)
+      (num - i).times do
+        print " "
+      end
+      i.times do
+        print "* "
+      end
+      print "\n"
+    end
+    (num-3).times do |i|
+      num.times do |j|
+        if j == num/2
+          print "  *"
+        else
+          print " "
+        end
+      end 
+     print "\n"
+    end
+    print " "
+    (num-2).times do |i|
+      print " *"
+    end
+    print " "
+  end
+  navidad(5)
